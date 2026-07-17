@@ -3,9 +3,9 @@
   bottom: 7rem;
   right: 1.5rem;
   width: 320px;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 12px 48px rgba(0,0,0,0.2);
+  background: var(--surface);
+  border-radius: 4px;
+  box-shadow: 0 12px 48px rgba(0,0,0,0.5);
   z-index: 999;
   overflow: hidden;
   animation: fadeUp 0.25s ease;
@@ -73,14 +73,14 @@
   line-height: 1.5;
 }
 .bot .chat-bubble {
-  background: white;
-  color: var(--navy);
+  background: var(--surface);
+  color: var(--white);
   border-bottom-left-radius: 4px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.3);
 }
 .user .chat-bubble {
-  background: var(--navy);
-  color: white;
+  background: var(--amber);
+  color: var(--navy);
   border-bottom-right-radius: 4px;
 }
 
@@ -109,7 +109,7 @@
   flex-wrap: wrap;
   gap: 0.4rem;
   border-top: 1px solid var(--gray-100);
-  background: white;
+  background: var(--surface);
 }
 .quick-btn {
   background: var(--gray-100);
@@ -119,7 +119,7 @@
   font-family: var(--font-heading);
   font-weight: 600;
   letter-spacing: 0.05em;
-  color: var(--navy);
+  color: var(--white);
   padding: 0.3rem 0.7rem;
   cursor: pointer;
   transition: all var(--transition);
@@ -129,7 +129,7 @@
 .chatbot-input {
   display: flex;
   border-top: 1px solid var(--gray-100);
-  background: white;
+  background: var(--surface);
 }
 .chatbot-input input {
   flex: 1;
@@ -139,6 +139,7 @@
   font-size: 0.82rem;
   font-family: var(--font-body);
   background: transparent;
+  color: var(--white);
 }
 .chatbot-input button {
   background: var(--navy);
