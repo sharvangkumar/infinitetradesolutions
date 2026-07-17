@@ -1,5 +1,5 @@
 .footer {
-  background: var(--navy);
+  background: var(--surface);
   color: rgba(255,255,255,0.7);
   padding-top: 3.5rem;
   margin-top: auto;
@@ -78,7 +78,7 @@
 .footer-contact a:hover { color: var(--amber); }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255,255,255,0.08);
+  border-top: 2px solid var(--amber);
   padding: 1rem 0;
 }
 .footer-bottom .container {

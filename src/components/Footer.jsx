@@ -39,7 +39,7 @@ export default function Footer() {
         <div className="footer-col">
           <h4>Contact Us</h4>
           <ul className="footer-contact">
-            <li><MapPin size={14} /> 114, Rajeev Nagar, Sector 18, Faridabad - 121002, Haryana, India</li>
+            <li><MapPin size={14} /> House No 2 B Block, Vijay Nagar, Faridabad - 121004, Haryana, India</li>
             <li><Phone size={14} /><a href="tel:+918800784466">+91 88007 84466</a></li>
             <li><Mail size={14} /><a href="mailto:info@infinitetrade.com">info@infinitetrade.com</a></li>
           </ul>
@@ -49,7 +49,7 @@ export default function Footer() {
       <div className="footer-bottom">
         <div className="container">
           <span>© 2024 Infinite Trade Solutions. Engineering Heavy Excellence.</span>
-          <span>GST Verified · IndiaMart Certified · Verified Exporter</span>
+          <span>GST Verified (06AAKFI1554M1Z4) · IndiaMart Certified · Verified Exporter</span>
         </div>
       </div>
     </footer>
