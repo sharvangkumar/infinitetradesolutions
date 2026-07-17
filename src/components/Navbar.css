@@ -3,7 +3,7 @@
   top: 0; left: 0; right: 0;
   z-index: 900;
   padding: 1rem 0;
-  background: rgba(10, 22, 40, 0.55);
+  background: rgba(13, 17, 23, 0.55);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   transition: background 0.35s ease, box-shadow 0.35s ease, padding 0.35s ease;
