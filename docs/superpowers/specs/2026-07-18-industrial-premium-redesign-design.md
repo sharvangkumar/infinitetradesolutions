@@ -29,6 +29,14 @@ Display the verified GSTIN (`06AAKFI1554M1Z4`) alongside the existing "GST Verif
 - **About** page, Credentials section: GST Verified card gets the number as a `<small>` line under the title.
 - **Contact** page, Industry Credentials sidebar card: GST Verified row gets the number appended.
 
+## Content Correction: Registered Address
+
+The site currently shows `114, Rajeev Nagar, Sector 18, Faridabad – 121002, Haryana, India` (matches the TradeIndia listing), but the GST portal record for GSTIN `06AAKFI1554M1Z4` shows a different registered address. Update every occurrence to the GST-registered address:
+
+`HOUSE NO 2 B BLOCK, VIJAY NAGAR, Faridabad – 121004, Haryana, India`
+
+Occurrences to update: **Contact** page (`address` block + Google Maps embed pin), **Footer** contact list, and the map `<iframe>` query (best-effort — the current embed URL is a placeholder pointing at Sector 18; update the query text to Vijay Nagar, Faridabad, 121004 since an exact verified embed isn't available).
+
 ## Design Tokens
 
 Replace the token block in `src/index.css`:
