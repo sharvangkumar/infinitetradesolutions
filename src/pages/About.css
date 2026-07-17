@@ -221,16 +221,6 @@
   .mission-vision { grid-template-columns: 1fr; }
 }
 
-/* CEO background accent */
-.ceo-section { position: relative; overflow: hidden; }
-.ceo-bg {
-  position: absolute; inset: 0;
-  background: url('/images/srikant-wide.png') center/cover no-repeat;
-  opacity: 0.06;
-  z-index: 0;
-}
-.ceo-grid { position: relative; z-index: 1; }
-
 /* CEO name label below photo */
 .ceo-image { position: relative; }
 .ceo-image-label {

@@ -56,22 +56,21 @@ export default function About() {
 
         {/* CEO */}
         <section className="ceo-section">
-          <div className="ceo-bg" aria-hidden="true" />
           <div className="container ceo-grid">
             <div className="ceo-image">
-              <img src="/images/srikant-portrait.png" alt="Srikant Bhardwaj, CEO of Infinite Trade Solutions" loading="lazy" />
+              <img src="/images/pritesh-sharma-portrait.png" alt="Pritesh Sharma, Founder of Infinite Trade Solutions" loading="lazy" />
               <div className="ceo-image-label">
-                <span>Srikant Bhardwaj</span>
-                <span>Chief Executive Officer</span>
+                <span>Pritesh Sharma</span>
+                <span>Founder</span>
               </div>
             </div>
             <div className="ceo-content">
               <p className="section-label">The Visionary</p>
-              <h2>Srikant Bhardwaj</h2>
+              <h2>Pritesh Sharma</h2>
               <blockquote>
                 "Infrastructure is the skeleton of civilization. Our goal is to provide the strongest bones possible, ensuring every project stands as a testament to engineering excellence."
               </blockquote>
-              <p>With over two decades of experience in global trade and heavy machinery logistics, Srikant Bhardwaj has steered Infinite Trade Solutions through market shifts and technological revolutions, always prioritizing client success and ethical transparency above all else.</p>
+              <p>With over two decades of experience in global trade and heavy machinery logistics, Pritesh Sharma has steered Infinite Trade Solutions through market shifts and technological revolutions, always prioritizing client success and ethical transparency above all else.</p>
               <div className="ceo-tags">
                 <span>Leadership</span><span>Strategy</span><span>Integrity</span>
               </div>
