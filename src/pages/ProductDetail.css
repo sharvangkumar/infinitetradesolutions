@@ -11,7 +11,7 @@
 }
 .breadcrumb a { color: var(--gray-500); transition: color var(--transition); }
 .breadcrumb a:hover { color: var(--amber); }
-.breadcrumb span:last-child { color: var(--navy); font-weight: 600; }
+.breadcrumb span:last-child { color: var(--white); font-weight: 600; }
 
 .detail-grid {
   display: grid;
@@ -36,7 +36,7 @@
   display: flex; gap: 0.5rem;
 }
 .badge-tag {
-  background: rgba(10,22,40,0.8);
+  background: rgba(13,17,23,0.8);
   color: white;
   font-family: var(--font-heading);
   font-size: 0.65rem;
@@ -100,10 +100,10 @@
   color: var(--gray-500);
   letter-spacing: 0.04em;
 }
-.detail-verified { color: var(--navy-mid); font-weight: 600; }
+.detail-verified { color: var(--amber); font-weight: 600; }
 
 .specs-table {
-  background: var(--gray-50);
+  background: var(--surface);
   border-radius: var(--radius);
   padding: 1.5rem;
   margin-bottom: 2rem;
@@ -130,7 +130,7 @@
   border-bottom: 1px solid var(--gray-100);
 }
 .spec-cell span { color: var(--gray-500); }
-.spec-cell strong { font-weight: 600; color: var(--navy); }
+.spec-cell strong { font-weight: 600; color: var(--white); }
 
 .detail-description h2 {
   font-size: 1.1rem;
@@ -183,7 +183,7 @@
   border: 1px solid var(--gray-100);
   border-radius: var(--radius);
   font-size: 0.78rem;
-  color: var(--navy);
+  color: var(--white);
 }
 .trust-badge-item svg { color: var(--amber); flex-shrink: 0; }
 .trust-badge-item small { display: block; color: var(--gray-500); font-size: 0.7rem; }
@@ -191,7 +191,7 @@
 /* RIGHT FORM */
 .detail-right { position: sticky; top: 90px; }
 .quote-form-card {
-  background: var(--navy);
+  background: var(--surface);
   border-radius: var(--radius);
   padding: 1.75rem;
   color: white;
@@ -224,8 +224,8 @@
   font-weight: 700;
 }
 .form-group input, .form-group select, .form-group textarea {
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.15);
+  background: var(--navy);
+  border: 1px solid var(--gray-100);
   border-radius: 4px;
   color: white;
   font-family: var(--font-body);
@@ -317,6 +317,7 @@
   border: 1px solid var(--gray-100);
   border-radius: var(--radius);
   overflow: hidden;
+  background: var(--surface);
   transition: transform var(--transition), box-shadow var(--transition);
   display: block;
 }
@@ -331,9 +332,9 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  border: 1px solid var(--navy);
+  border: 1px solid var(--amber);
   background: none;
-  color: var(--navy);
+  color: var(--amber);
   font-family: var(--font-heading);
   font-size: 0.72rem;
   font-weight: 700;
@@ -344,7 +345,7 @@
   cursor: pointer;
   transition: all var(--transition);
 }
-.btn-outline-dark:hover { background: var(--navy); color: white; }
+.btn-outline-dark:hover { background: var(--amber); color: var(--navy); }
 
 @media (max-width: 960px) {
   .detail-grid { grid-template-columns: 1fr; }
