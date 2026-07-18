@@ -131,8 +131,8 @@ function ProductCard({ product: p }) {
         <Link to={`/products/${p.id}`} className="card-cta">
           Send Enquiry <ArrowRight size={14} />
         </Link>
-        <a href="tel:+918800784466" className="card-phone">
-          <Phone size={12} /> CALL: 8800784466
+        <a href="tel:+918800143366" className="card-phone">
+          <Phone size={12} /> CALL: 880-014-3366
         </a>
       </div>
     </article>

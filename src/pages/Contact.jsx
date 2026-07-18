@@ -4,7 +4,7 @@ import { Phone, Mail, MapPin, Shield, Globe, CheckCircle, Send, Loader } from 'l
 import { submitEnquiry } from '../services/enquiry'
 import './Contact.css'
 
-const WHATSAPP_URL = 'https://wa.me/918800784466?text=Hello%2C%20I%20am%20interested%20in%20your%20heavy%20equipment.%20Please%20share%20details.'
+const WHATSAPP_URL = 'https://wa.me/918800143366?text=Hello%2C%20I%20am%20interested%20in%20your%20heavy%20equipment.%20Please%20share%20details.'
 
 export default function Contact() {
   const [form, setForm] = useState({ firstName: '', lastName: '', email: '', country: 'India', phone: '', message: '' })
@@ -39,7 +39,7 @@ export default function Contact() {
     <>
       <Helmet>
         <title>Contact Us | Infinite Trade Solutions</title>
-        <meta name="description" content="Get in touch with Infinite Trade Solutions, Faridabad, Haryana. Call +91 88007 84466 or email us for heavy equipment enquiries, export quotes, and technical support." />
+        <meta name="description" content="Get in touch with Infinite Trade Solutions, Faridabad, Haryana. Call +91 880-014-3366 or email us for heavy equipment enquiries, export quotes, and technical support." />
       </Helmet>
 
       <div className="contact-page">
@@ -64,8 +64,8 @@ export default function Contact() {
                   <h3>Enquiry Received!</h3>
                   <p>Thank you, <strong>{form.firstName}</strong>. Our team will respond within 12 hours.</p>
                   <p>For urgent needs, call us directly:</p>
-                  <a href="tel:+918800784466" className="btn-primary" style={{ justifyContent: 'center', marginTop: '0.5rem' }}>
-                    <Phone size={14} /> +91 88007 84466
+                  <a href="tel:+918800143366" className="btn-primary" style={{ justifyContent: 'center', marginTop: '0.5rem' }}>
+                    <Phone size={14} /> +91 880-014-3366
                   </a>
                   <button className="reset-btn" onClick={() => { setForm({ firstName:'',lastName:'',email:'',country:'India',phone:'',message:'' }); setSubmitted(false) }}>
                     Submit Another Enquiry
@@ -100,7 +100,7 @@ export default function Contact() {
                       <label htmlFor="c-phone">Phone Number</label>
                       <div className="phone-wrap">
                         <span className="phone-code">+91</span>
-                        <input id="c-phone" type="tel" placeholder="88007 84466" value={form.phone} onChange={set('phone')} />
+                        <input id="c-phone" type="tel" placeholder="880-014-3366" value={form.phone} onChange={set('phone')} />
                       </div>
                     </div>
                   </div>
@@ -124,7 +124,7 @@ export default function Contact() {
                   <Phone size={18} />
                   <div>
                     <span className="ch-label">Call Us</span>
-                    <a href="tel:+918800784466" className="ch-value">+91 88007 84466</a>
+                    <a href="tel:+918800143366" className="ch-value">+91 880-014-3366</a>
                     <a href="tel:+911294000000" className="ch-value secondary">+91 129 400 0000</a>
                   </div>
                 </div>

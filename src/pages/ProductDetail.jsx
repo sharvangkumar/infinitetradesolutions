@@ -122,8 +122,8 @@ export default function ProductDetail() {
                     <Check size={32} />
                     <strong>Enquiry Submitted!</strong>
                     <p>Our team will contact you within 12 hours. Or call us directly:</p>
-                    <a href="tel:+918800784466" className="btn-primary" style={{ marginTop: '0.5rem', justifyContent: 'center' }}>
-                      <Phone size={14} /> +91 88007 84466
+                    <a href="tel:+918800143366" className="btn-primary" style={{ marginTop: '0.5rem', justifyContent: 'center' }}>
+                      <Phone size={14} /> +91 880-014-3366
                     </a>
                   </div>
                 ) : (
@@ -164,7 +164,7 @@ export default function ProductDetail() {
 
                 <div className="instant-support">
                   Prefer Instant Support?
-                  <a href="tel:+918800784466"><Phone size={14} /> +91 88007 84466</a>
+                  <a href="tel:+918800143366"><Phone size={14} /> +91 880-014-3366</a>
                 </div>
               </div>
             </div>

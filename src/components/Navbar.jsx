@@ -39,8 +39,8 @@ export default function Navbar() {
         </ul>
 
         <div className="navbar-actions">
-          <a href="tel:+918800784466" className="nav-phone" aria-label="Call us">
-            <Phone size={14} /> +91 88007 84466
+          <a href="tel:+918800143366" className="nav-phone" aria-label="Call us">
+            <Phone size={14} /> +91 880-014-3366
           </a>
           <Link to="/contact" className="btn-primary">Get Quote</Link>
           <button className="hamburger" onClick={() => setOpen(o => !o)} aria-label="Toggle menu" aria-expanded={open}>
@@ -54,8 +54,8 @@ export default function Navbar() {
           {links.map(l => (
             <Link key={l.to} to={l.to} className={`mobile-link${pathname === l.to ? ' active' : ''}`}>{l.label}</Link>
           ))}
-          <a href="tel:+918800784466" className="mobile-phone">
-            <Phone size={15} /> +91 88007 84466
+          <a href="tel:+918800143366" className="mobile-phone">
+            <Phone size={15} /> +91 880-014-3366
           </a>
           <Link to="/contact" className="btn-primary" style={{ marginTop: '0.5rem', justifyContent: 'center' }}>Get Quote</Link>
         </div>
