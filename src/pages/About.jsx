@@ -1,11 +1,18 @@
 import { Helmet } from 'react-helmet-async'
-import { Shield, Globe, CheckCircle } from 'lucide-react'
+import { Shield, Globe, CheckCircle, Briefcase, Users, Calendar, Clock } from 'lucide-react'
 import './About.css'
 
 const milestones = [
-  { year: '1998', title: 'The Foundation', desc: 'Inception of Infinite Trade Solutions in New Delhi, focusing on local civil engineering equipment.', img: 'https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&fit=crop' },
-  { year: '2010', title: 'Global Expansion', desc: 'Launched our first international trade wing, exporting heavy excavators and cranes to the MENA region.', img: 'https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&fit=crop' },
-  { year: 'Present', title: 'Engineering Modernity', desc: 'Leading the B2B machinery sector with AI-driven logistics and 24/7 technical support infrastructure.', img: 'https://images.pexels.com/photos/2252060/pexels-photo-2252060.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&fit=crop' }
+  { year: '2023', title: 'The Foundation', desc: 'Infinite Trade Solutions was established in Faridabad, Haryana, as a supplier and trading company for heavy construction equipment.', img: 'https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&fit=crop' },
+  { year: '2024', title: 'Global Reach', desc: 'Shipped our first international orders — backhoe loaders and excavators exported to Russia and Andhra Pradesh — while building out our JCB, CASE, and Caterpillar catalog.', img: 'https://images.pexels.com/photos/2101137/pexels-photo-2101137.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&fit=crop' },
+  { year: 'Present', title: 'Growing the Fleet', desc: 'A verified exporter and top-ranked supplier on IndiaMART and TradeIndia, now serving construction and mining operations across India and abroad.', img: '/images/products/case-570sv-backhoe.jpg' }
+]
+
+const factsheet = [
+  { icon: <Briefcase size={22} />, label: 'Business Type', value: 'Supplier, Trading Company' },
+  { icon: <Users size={22} />, label: 'Employee Count', value: '10' },
+  { icon: <Calendar size={22} />, label: 'Establishment', value: '2023' },
+  { icon: <Clock size={22} />, label: 'Working Days', value: 'Monday – Sunday' }
 ]
 
 export default function About() {
@@ -13,7 +20,7 @@ export default function About() {
     <>
       <Helmet>
         <title>About Us | Infinite Trade Solutions</title>
-        <meta name="description" content="Infinite Trade Solutions — India's trusted heavy equipment dealer since 1998. Learn about our story, CEO Srikant Bhardwaj, and our verified exporter credentials." />
+        <meta name="description" content="Infinite Trade Solutions — India's trusted heavy equipment dealer since 2023. Learn about our story, founder Pritesh Sharma, and our verified exporter credentials." />
       </Helmet>
 
       <div className="about-page">
@@ -21,9 +28,9 @@ export default function About() {
         <section className="about-hero">
           <div className="about-hero-bg" />
           <div className="container about-hero-content">
-            <p className="section-label">Established 1998</p>
+            <p className="section-label">Established 2023</p>
             <h1>Our Story:<br /><span className="amber">Heavy Equipment<br />Excellence</span></h1>
-            <p>Building global infrastructure through trust, transparency, and the world's most reliable machinery. Engineering trade solutions for over two decades.</p>
+            <p>Building global infrastructure through trust, transparency, and the world's most reliable machinery — engineering trade solutions from Faridabad, Haryana, to the world.</p>
           </div>
         </section>
 
@@ -31,15 +38,15 @@ export default function About() {
         <section className="legacy-section">
           <div className="container legacy-grid">
             <div className="legacy-image">
-              <img src="https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Heavy excavator operations on construction site" loading="lazy" />
+              <img src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Engineers reviewing plans on a construction site" loading="lazy" />
               <div className="legacy-stat-badge">
-                <span className="stat-big">25+</span>
-                <span>Years of Mastery</span>
+                <span className="stat-big">100%</span>
+                <span>Export Focused</span>
               </div>
             </div>
             <div className="legacy-text">
-              <h2>A Legacy Built on<br />Concrete &amp; Steel</h2>
-              <p>Infinite Trade Solutions began with a singular vision: to bridge the gap between heavy industry and global accessibility. What started in 1998 as a local equipment brokerage has evolved into an international powerhouse of machinery trade and engineering consultation.</p>
+              <h2>A Fast-Growing<br />Trade Partner</h2>
+              <p>Infinite Trade Solutions began with a singular vision: to bridge the gap between heavy industry and global accessibility. Established in 2023 in Faridabad, Haryana, the company has quickly grown into a verified exporter of construction and mining equipment, shipping JCB, CASE, Caterpillar, and Hyundai machinery across India and to international markets.</p>
               <div className="mission-vision">
                 <div>
                   <h4>Our Mission</h4>
@@ -51,6 +58,21 @@ export default function About() {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* FACTSHEET */}
+        <section className="factsheet-section">
+          <div className="container factsheet-grid">
+            {factsheet.map(f => (
+              <div key={f.label} className="factsheet-item">
+                <div className="factsheet-icon">{f.icon}</div>
+                <div>
+                  <span className="factsheet-label">{f.label}</span>
+                  <span className="factsheet-value">{f.value}</span>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
 
@@ -70,7 +92,7 @@ export default function About() {
               <blockquote>
                 "Infrastructure is the skeleton of civilization. Our goal is to provide the strongest bones possible, ensuring every project stands as a testament to engineering excellence."
               </blockquote>
-              <p>With over two decades of experience in global trade and heavy machinery logistics, Pritesh Sharma has steered Infinite Trade Solutions through market shifts and technological revolutions, always prioritizing client success and ethical transparency above all else.</p>
+              <p>Since founding Infinite Trade Solutions in 2023, Pritesh Sharma has grown the company into a verified exporter of heavy construction machinery, always prioritizing client success and ethical transparency above all else.</p>
               <div className="ceo-tags">
                 <span>Leadership</span><span>Strategy</span><span>Integrity</span>
               </div>
@@ -86,12 +108,13 @@ export default function About() {
               {[
                 { icon: <Globe size={24} />, title: "Verified Exporter", desc: "Global trade compliance and export certification for 50+ countries." },
                 { icon: <Shield size={24} />, title: "IndiaMart Certified", desc: "Top ranking for reliability and excellence on India's largest B2B platform." },
-                { icon: <CheckCircle size={24} />, title: "GST Verified", desc: "Fully transparent tax and legal compliance in all domestic operations." }
+                { icon: <CheckCircle size={24} />, title: "GST Verified", desc: "Fully transparent tax and legal compliance in all domestic operations.", sub: "GSTIN: 06AAKFI1554M1Z4" }
               ].map(c => (
                 <div key={c.title} className="credential-card">
                   <div className="cred-icon">{c.icon}</div>
                   <h4>{c.title}</h4>
                   <p>{c.desc}</p>
+                  {c.sub && <small>{c.sub}</small>}
                 </div>
               ))}
             </div>
