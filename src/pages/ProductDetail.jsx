@@ -37,7 +37,7 @@ export default function ProductDetail() {
     <>
       <Helmet>
         <title>{product.name} | Infinite Trade Solutions</title>
-        <meta name="description" content={`${product.name} - ${product.category} available at $${product.price.toLocaleString()}. ${product.description.slice(0, 120)}...`} />
+        <meta name="description" content={`${product.name} - ${product.category} available now. ${product.description.slice(0, 120)}...`} />
       </Helmet>
 
       <div className="detail-page">
@@ -67,9 +67,9 @@ export default function ProductDetail() {
                 <div className="thumb-count">+{images.length} Photos</div>
               </div>
 
-              <h1 className="detail-title">{product.name} {product.category}</h1>
+              <h1 className="detail-title">{product.name}</h1>
               <div className="detail-meta">
-                <span className="detail-price">${product.price.toLocaleString()}</span>
+                <span className="detail-price">Get Quote</span>
                 <span className="detail-loc"><MapPin size={13} /> {product.location}</span>
                 <span className="detail-verified"><Shield size={13} /> Verified Exporter</span>
               </div>
@@ -186,7 +186,7 @@ export default function ProductDetail() {
                     <img src={p.image} alt={p.name} loading="lazy" />
                     <div className="related-info">
                       <h4>{p.name}</h4>
-                      <span className="related-price">${p.price.toLocaleString()}</span>
+                      <span className="related-price">Get Quote</span>
                       <span className="related-meta">{p.year} Model · {p.hours || 'New Unit'}</span>
                       <button className="btn-outline-dark">View Details</button>
                     </div>

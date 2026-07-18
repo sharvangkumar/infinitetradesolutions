@@ -8,12 +8,6 @@ import './Products.css'
 const BRANDS = ['All Brands', 'JCB', 'CASE', 'Caterpillar', 'Hyundai']
 const CATEGORIES = ['All Types', 'Backhoe Loader', 'Tracked Excavator', 'Compactor', 'Telehandler']
 const CONDITIONS = ['New & Used', 'New', 'Used']
-const BUDGETS = [
-  { label: 'Any Price', min: 0, max: Infinity },
-  { label: 'Under $30K', min: 0, max: 30000 },
-  { label: '$30K – $60K', min: 30000, max: 60000 },
-  { label: '$60K+', min: 60000, max: Infinity }
-]
 
 export default function Products() {
   const [params] = useSearchParams()
@@ -23,19 +17,16 @@ export default function Products() {
   const [category, setCategory] = useState(initCat === 'All Types' ? 'All Types' : initCat.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()))
   const [brand, setBrand] = useState('All Brands')
   const [condition, setCondition] = useState('New & Used')
-  const [budgetIdx, setBudgetIdx] = useState(0)
 
   const filtered = useMemo(() => {
-    const budget = BUDGETS[budgetIdx]
     return products.filter(p => {
       if (search && !p.name.toLowerCase().includes(search.toLowerCase()) && !p.brand.toLowerCase().includes(search.toLowerCase())) return false
       if (category !== 'All Types' && p.category !== category) return false
       if (brand !== 'All Brands' && p.brand !== brand) return false
       if (condition !== 'New & Used' && p.condition !== condition) return false
-      if (p.price < budget.min || p.price > budget.max) return false
       return true
     })
-  }, [search, category, brand, condition, budgetIdx])
+  }, [search, category, brand, condition])
 
   return (
     <>
@@ -92,12 +83,6 @@ export default function Products() {
                 {CONDITIONS.map(c => <option key={c}>{c}</option>)}
               </select>
             </div>
-            <div className="filter-group">
-              <label className="filter-label" htmlFor="filter-budget">Budget (USD)</label>
-              <select id="filter-budget" value={budgetIdx} onChange={e => setBudgetIdx(+e.target.value)} aria-label="Filter by budget">
-                {BUDGETS.map((b, i) => <option key={b.label} value={i}>{b.label}</option>)}
-              </select>
-            </div>
           </div>
         </div>
 
@@ -111,7 +96,7 @@ export default function Products() {
           {filtered.length === 0 ? (
             <div className="no-results">
               <Filter size={40} />
-              <p>No equipment matches your filters. <button onClick={() => { setSearch(''); setCategory('All Types'); setBrand('All Brands'); setCondition('New & Used'); setBudgetIdx(0) }}>Reset filters</button></p>
+              <p>No equipment matches your filters. <button onClick={() => { setSearch(''); setCategory('All Types'); setBrand('All Brands'); setCondition('New & Used') }}>Reset filters</button></p>
             </div>
           ) : (
             <div className="products-grid">
@@ -135,13 +120,13 @@ function ProductCard({ product: p }) {
       <div className="card-body">
         <div className="card-title-row">
           <h3>{p.name}</h3>
-          <span className="card-price">${p.price.toLocaleString()}</span>
+          <span className="card-price">Get Quote</span>
         </div>
         <div className="card-category">{p.category}</div>
         <div className="card-specs">
           <div className="spec-row"><span>Year</span><strong>{p.year}</strong></div>
           {p.hours && <div className="spec-row"><span>Usage</span><strong>{p.hours}</strong></div>}
-          {p.transmission && <div className="spec-row"><span>Condition</span><strong>{p.condition}</strong></div>}
+          {p.condition && <div className="spec-row"><span>Condition</span><strong>{p.condition}</strong></div>}
         </div>
         <Link to={`/products/${p.id}`} className="card-cta">
           Send Enquiry <ArrowRight size={14} />
