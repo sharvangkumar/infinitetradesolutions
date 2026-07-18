@@ -20,7 +20,7 @@ export default function About() {
     <>
       <Helmet>
         <title>About Us | Infinite Trade Solutions</title>
-        <meta name="description" content="Infinite Trade Solutions — India's trusted heavy equipment dealer since 2023. Learn about our story, founder Pritesh Sharma, and our verified exporter credentials." />
+        <meta name="description" content="Infinite Trade Solutions — India's trusted heavy equipment dealer since 2023. Learn about our story, Partner Pritesh Sharma, and our verified exporter credentials." />
       </Helmet>
 
       <div className="about-page">
@@ -80,10 +80,10 @@ export default function About() {
         <section className="ceo-section">
           <div className="container ceo-grid">
             <div className="ceo-image">
-              <img src="/images/pritesh-sharma-portrait.png" alt="Pritesh Sharma, Founder of Infinite Trade Solutions" loading="lazy" />
+              <img src="/images/pritesh-sharma-portrait.png" alt="Pritesh Sharma, Partner at Infinite Trade Solutions" loading="lazy" />
               <div className="ceo-image-label">
                 <span>Pritesh Sharma</span>
-                <span>Founder</span>
+                <span>Partner</span>
               </div>
             </div>
             <div className="ceo-content">
