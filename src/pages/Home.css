@@ -11,7 +11,7 @@
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(135deg, rgba(10,22,40,0.92) 0%, rgba(10,22,40,0.75) 60%, rgba(30,58,95,0.6) 100%),
+    linear-gradient(135deg, rgba(13,17,23,0.95) 0%, rgba(13,17,23,0.85) 60%, rgba(23,29,38,0.7) 100%),
     url('https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover no-repeat;
   z-index: 0;
 }
@@ -74,14 +74,20 @@
 
 /* STATS */
 .stats-bar {
-  background: var(--navy);
-  padding: 2.5rem 0;
+  padding: 0;
 }
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
   text-align: center;
+  background: var(--surface);
+  border: 1px solid var(--gray-100);
+  border-radius: var(--radius);
+  padding: 1.75rem 1rem;
+  margin-top: -1.5rem;
+  position: relative;
+  z-index: 2;
 }
 .stat-card {}
 .stat-value {
@@ -141,7 +147,7 @@
 .category-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(0deg, rgba(10,22,40,0.85) 0%, rgba(10,22,40,0.2) 60%);
+  background: linear-gradient(0deg, rgba(13,17,23,0.95) 0%, rgba(13,17,23,0.35) 60%);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -149,7 +155,7 @@
   transition: background var(--transition);
 }
 .category-card:hover .category-overlay {
-  background: linear-gradient(0deg, rgba(10,22,40,0.9) 0%, rgba(10,22,40,0.4) 60%);
+  background: linear-gradient(0deg, rgba(13,17,23,0.97) 0%, rgba(13,17,23,0.55) 60%);
 }
 .category-overlay h3 {
   font-size: 1rem;
@@ -194,7 +200,7 @@
 .trust-card {
   text-align: center;
   padding: 2rem 1.5rem;
-  background: white;
+  background: var(--surface);
   border-radius: var(--radius);
   border: 1px solid var(--gray-100);
   transition: transform var(--transition), box-shadow var(--transition);
@@ -202,7 +208,7 @@
 .trust-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-card); }
 .trust-icon {
   width: 56px; height: 56px;
-  background: rgba(245,166,35,0.1);
+  background: rgba(255,107,53,0.12);
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
   color: var(--amber);
@@ -227,13 +233,13 @@
   gap: 1.5rem;
 }
 .testimonial-card {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
+  background: var(--surface);
+  border: 1px solid var(--gray-100);
   border-radius: var(--radius);
   padding: 2rem;
   transition: border-color var(--transition);
 }
-.testimonial-card:hover { border-color: rgba(245,166,35,0.4); }
+.testimonial-card:hover { border-color: var(--amber); }
 .stars { display: flex; gap: 3px; margin-bottom: 1rem; }
 .testimonial-text {
   color: rgba(255,255,255,0.8);
@@ -286,16 +292,16 @@
   align-items: center;
   gap: 0.75rem;
   padding: 1rem 1.25rem;
-  background: var(--gray-50);
+  background: var(--surface);
   border: 1px solid var(--gray-100);
   border-radius: var(--radius);
   transition: all var(--transition);
 }
-.shipment-card:hover { border-color: var(--amber); background: rgba(245,166,35,0.05); }
+.shipment-card:hover { border-color: var(--amber); background: rgba(255,107,53,0.08); }
 .shipment-flag { font-size: 1.5rem; }
 .shipment-model { font-family: var(--font-heading); font-weight: 700; font-size: 0.9rem; text-transform: uppercase; }
 .shipment-dest { font-size: 0.75rem; color: var(--gray-500); letter-spacing: 0.06em; }
-.shipment-arrow { color: var(--gray-300); margin-left: auto; flex-shrink: 0; }
+.shipment-arrow { color: var(--gray-500); margin-left: auto; flex-shrink: 0; }
 
 /* CTA BANNER */
 .cta-banner {
@@ -309,7 +315,7 @@
   margin-bottom: 0.75rem;
 }
 .cta-content p {
-  color: rgba(10,22,40,0.7);
+  color: rgba(13,17,23,0.75);
   margin-bottom: 2rem;
   font-size: 1rem;
 }
@@ -319,7 +325,7 @@
   font-size: 0.9rem;
   padding: 1rem 2rem;
 }
-.cta-btn:hover { background: rgba(10,22,40,0.85); transform: translateY(-2px); }
+.cta-btn:hover { background: rgba(13,17,23,0.85); transform: translateY(-2px); }
 
 .sr-only {
   position: absolute; width: 1px; height: 1px;
