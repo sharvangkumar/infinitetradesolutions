@@ -12,7 +12,7 @@
   inset: 0;
   background:
     linear-gradient(135deg, rgba(13,17,23,0.95) 0%, rgba(13,17,23,0.85) 60%, rgba(23,29,38,0.7) 100%),
-    url('https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover no-repeat;
+    url('https://images.pexels.com/photos/2101137/pexels-photo-2101137.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover no-repeat;
   z-index: 0;
 }
 .hero-content {
