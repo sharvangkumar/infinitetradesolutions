@@ -146,7 +146,7 @@ export default function Contact() {
                 <h4>Industry Credentials</h4>
                 <div className="cred-row"><Shield size={16} /> <span><strong>IndiaMart Certified</strong><small>Premium Supplier Status</small></span></div>
                 <div className="cred-row"><Globe size={16} /> <span><strong>Verified Exporter</strong><small>Global Trade Compliant</small></span></div>
-                <div className="cred-row"><CheckCircle size={16} /> <span><strong>GST Verified</strong><small>Fully compliant since 2017</small></span></div>
+                <div className="cred-row"><CheckCircle size={16} /> <span><strong>GST Verified</strong><small>GSTIN 06AAKFI1554M1Z4 · Registered 2024</small></span></div>
               </div>
             </div>
           </div>
@@ -160,8 +160,8 @@ export default function Contact() {
               <address>
                 <MapPin size={18} />
                 <div>
-                  114, Rajeev Nagar, Sector 18,<br />
-                  Faridabad – 121002,<br />
+                  House No 2 B Block, Vijay Nagar,<br />
+                  Faridabad – 121004,<br />
                   Haryana, India
                 </div>
               </address>
@@ -175,8 +175,8 @@ export default function Contact() {
 
             <div className="map-embed">
               <iframe
-                title="Infinite Trade Solutions Location - Faridabad, Haryana"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.1234567890!2d77.3103!3d28.4089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cdd6a7b8f1234%3A0xabcdef1234567890!2sSector+18%2C+Faridabad%2C+Haryana+121002!5e0!3m2!1sen!2sin!4v1234567890"
+                title="Infinite Trade Solutions Location - Vijay Nagar, Faridabad, Haryana"
+                src="https://www.google.com/maps?q=Vijay+Nagar%2C+Faridabad%2C+Haryana+121004%2C+India&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
