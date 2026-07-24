@@ -40,7 +40,7 @@ export default function Footer() {
           <h4>Contact Us</h4>
           <ul className="footer-contact">
             <li><MapPin size={14} /> House No 2 B Block, Vijay Nagar, Faridabad - 121004, Haryana, India</li>
-            <li><Phone size={14} /><a href="tel:+918800143366">+91 880-014-3366</a></li>
+            <li><Phone size={14} /><a href="tel:+919958853509">+91 995-885-3509</a></li>
             <li><Mail size={14} /><a href="mailto:info@infinitetrade.com">info@infinitetrade.com</a></li>
           </ul>
         </div>

@@ -3,13 +3,13 @@ import { MessageSquare, X, Send } from 'lucide-react'
 import './FloatButtons.css'
 
 const BOT_RESPONSES = {
-  default: "Thanks for reaching out! I'm here to help with equipment inquiries. You can ask about our products, pricing, or shipping — or call us directly at +91 880-014-3366.",
+  default: "Thanks for reaching out! I'm here to help with equipment inquiries. You can ask about our products, pricing, or shipping — or call us directly at +91 995-885-3509.",
   price: "Pricing depends on the model, specification, and order quantity — our team will get you the best quote within 12 hours. Would you like a custom quote for a specific machine?",
   jcb: "We stock multiple JCB models including the JCB JS 215LC Excavator, JCB Telehandler 5 Ton, and JCB 530-70 Telescopic Telehandler. Want full specs?",
   excavator: "We carry the Caterpillar 320D3 GC, Hyundai R215L Smart Plus, and JCB JS 215LC excavators. Shall I connect you with our team for a quote?",
   backhoe: "Our backhoe loaders include the CASE 770EX and CASE 570SV. All available ex-Faridabad, Haryana.",
   shipping: "We export globally — Russia, Africa, Middle East, and all Indian states. Shipping timelines vary by destination. Contact us for a logistics quote.",
-  contact: "📞 +91 880-014-3366\n📧 info@infinitetrade.com\n📍 House No 2 B Block, Vijay Nagar, Faridabad - 121004, Haryana",
+  contact: "📞 +91 995-885-3509\n📧 info@infinitetrade.com\n📍 House No 2 B Block, Vijay Nagar, Faridabad - 121004, Haryana",
   hello: "Hello! Welcome to Infinite Trade Solutions. I can help you with:\n• Equipment specs & quotes\n• Export & shipping info\n• Getting a custom quote\n\nWhat are you looking for?"
 }
 
@@ -54,7 +54,7 @@ export default function FloatButtons() {
     <>
       <div className="float-buttons" aria-label="Quick contact options">
         <a
-          href="https://wa.me/918800143366?text=Hello%2C%20I%20am%20interested%20in%20your%20heavy%20equipment."
+          href="https://wa.me/919958853509?text=Hello%2C%20I%20am%20interested%20in%20your%20heavy%20equipment."
           target="_blank"
           rel="noopener noreferrer"
           className="float-btn whatsapp"
