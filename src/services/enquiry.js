@@ -2,7 +2,7 @@
  * ENQUIRY SERVICE
  * Handles 3 things:
  * 1. Saves every enquiry to localStorage (instant, always works)
- * 2. Sends email via EmailJS (free tier: 200 emails/month)
+ * 2. Sends email via /api/enquiry (Vercel serverless function -> GoDaddy SMTP mailbox)
  * 3. Optionally posts to Google Sheets via a webhook (free, unlimited)
  *
  * Setup instructions are in .env.example
@@ -11,11 +11,6 @@
 // ─── CONFIG ────────────────────────────────────────────────────────────────
 // Copy .env.example → .env.local and fill in your keys
 const CONFIG = {
-  emailjs: {
-    serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID || '',
-    templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID || '',
-    publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY || '',
-  },
   // Google Sheets webhook (Apps Script URL)
   sheetsWebhookUrl: import.meta.env.VITE_SHEETS_WEBHOOK_URL || '',
 }
@@ -48,28 +43,21 @@ export function getLocalEnquiries() {
   }
 }
 
-// ─── EMAILJS ────────────────────────────────────────────────────────────────
-async function sendViaEmailJS(formData) {
-  const { serviceId, templateId, publicKey } = CONFIG.emailjs
-  if (!serviceId || !templateId || !publicKey) {
-    console.warn('EmailJS not configured — skipping email send')
-    return { success: false, reason: 'not_configured' }
-  }
-
+// ─── EMAIL (via serverless function) ────────────────────────────────────────
+async function sendViaApi(formData) {
   try {
-    const { default: emailjs } = await import('@emailjs/browser')
-    await emailjs.send(serviceId, templateId, {
-      from_name: `${formData.firstName} ${formData.lastName}`,
-      from_email: formData.email,
-      phone: formData.phone || 'Not provided',
-      country: formData.country,
-      message: formData.message,
-      product: formData.product || 'General Enquiry',
-      to_email: 'info@infinitetrade.com',
-    }, publicKey)
+    const res = await fetch('/api/enquiry', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData),
+    })
+    if (!res.ok) {
+      const body = await res.json().catch(() => ({}))
+      return { success: false, reason: body.error || `HTTP ${res.status}` }
+    }
     return { success: true }
   } catch (e) {
-    console.error('EmailJS error:', e)
+    console.error('Enquiry email send failed:', e)
     return { success: false, reason: e.message }
   }
 }
@@ -106,7 +94,7 @@ export async function submitEnquiry(formData) {
 
   // 2. Fire email + sheets in parallel (non-blocking)
   const [emailResult, sheetsResult] = await Promise.allSettled([
-    sendViaEmailJS(formData),
+    sendViaApi(formData),
     sendToGoogleSheets(formData)
   ])
 

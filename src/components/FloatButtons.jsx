@@ -9,7 +9,7 @@ const BOT_RESPONSES = {
   excavator: "We carry the Caterpillar 320D3 GC, Hyundai R215L Smart Plus, and JCB JS 215LC excavators. Shall I connect you with our team for a quote?",
   backhoe: "Our backhoe loaders include the CASE 770EX and CASE 570SV. All available ex-Faridabad, Haryana.",
   shipping: "We export globally — Russia, Africa, Middle East, and all Indian states. Shipping timelines vary by destination. Contact us for a logistics quote.",
-  contact: "📞 +91 995-885-3509\n📧 info@infinitetrade.com\n📍 House No 2 B Block, Vijay Nagar, Faridabad - 121004, Haryana",
+  contact: "📞 +91 995-885-3509\n📧 sales@infinitetradesolutions.com\n📍 House No 2 B Block, Vijay Nagar, Faridabad - 121004, Haryana",
   hello: "Hello! Welcome to Infinite Trade Solutions. I can help you with:\n• Equipment specs & quotes\n• Export & shipping info\n• Getting a custom quote\n\nWhat are you looking for?"
 }
 

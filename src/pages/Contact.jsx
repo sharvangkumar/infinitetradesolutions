@@ -132,8 +132,7 @@ export default function Contact() {
                   <Mail size={18} />
                   <div>
                     <span className="ch-label">Email Us</span>
-                    <a href="mailto:sales@infinitetrade.com" className="ch-value">sales@infinitetrade.com</a>
-                    <a href="mailto:info@infinitetrade.com" className="ch-value secondary">info@infinitetrade.com</a>
+                    <a href="mailto:sales@infinitetradesolutions.com" className="ch-value">sales@infinitetradesolutions.com</a>
                   </div>
                 </div>
                 <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="whatsapp-btn">
